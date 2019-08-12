@@ -8,7 +8,6 @@
         }()
         this.getCompanyArticles = companySvc.getArticles();
         this.getServices = companySvc.getOffers();
-         
     }
 
 

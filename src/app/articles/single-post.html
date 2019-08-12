@@ -1,5 +1,12 @@
 <div ng-controller="postsController as post" class="container my-4">
     <form>
-        
+        <p> Post title<br>
+            <input type="text" ng-model="post.title" class="k-textbox w-100"/>
+        </p>
+        <textarea kendo-editor></textarea>
+
+        <p class="my-4">
+            <button kendo-button>Publish</button>
+        </p>
     </form>
 </div>
