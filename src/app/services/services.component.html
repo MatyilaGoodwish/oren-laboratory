@@ -7,7 +7,7 @@
                 Total Services offered: <span class="badge badge-warning">{{company.getServices.length}}</span>
                 <div class="card my-2 shadow-sm" ng-repeat="service in company.getServices | filter: company.service.query">
                     <p class="card-header bg-dark text-warning font-weight-bold">{{service.title}}
-                        <button (click)="placeOrder()" kendo-button class="float-right"><img src="../../assets/uptasker.png" width="90"/> Get Quote</button>
+                        <a href="#/quotation/request" kendo-button class="float-right"><img src="../../assets/uptasker.png" width="90"/> Get Quote</a>
                     </p>
                     <div class="card-body text-muted">
                             <p class="card-text">

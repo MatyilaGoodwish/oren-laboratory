@@ -1,11 +1,14 @@
 (function(){
     const app = angular.module("orenlabs");
     app.controller("servicesController", 
-    ["companySvc","$http", servicesController]);
-    function servicesController(companySvc, $http){
-       
+    ["companySvc","$http","$cookies", servicesController]);
+    function servicesController(companySvc, $http, $cookies){
+        this.visitor = function(){
+            $cookies.put("last-visit", new Date())
+        }()
         this.getCompanyArticles = companySvc.getArticles();
         this.getServices = companySvc.getOffers();
+         
     }
 
 

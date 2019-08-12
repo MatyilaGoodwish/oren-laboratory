@@ -5,7 +5,7 @@
         $locationProvider.hashPrefix("");
         $routeProvider
             .when("/", {
-                templateUrl: "app/welcome/welcome.component.html",
+                templateUrl: "app/services/services.component.html",
                 controller: "welcomeController"
             })
             .when("/services", {
@@ -27,6 +27,15 @@
             .when("/single/post", {
                 templateUrl: "app/articles/single-post.html",
                 controller: "postsController"
+            })
+            .when("/quotation/request", {
+                resolve: {
+                   redirect: function(){
+                    location.replace('https://uptasker.co.za/b/angulardevelopers');
+                   }
+                },
+                templateUrl: "please wait",
+                controller: ""
             })
             .otherwise({
                 redirectTo: "/"
