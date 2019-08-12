@@ -1,7 +1,7 @@
-(function(){
+(function () {
     angular.module("orenlabs")
-    .config(routeConfiguration);
-    function routeConfiguration($routeProvider, $locationProvider){
+        .config(routeConfiguration);
+    function routeConfiguration($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix("");
         $routeProvider
             .when("/", {
@@ -26,7 +26,7 @@
             })
             .when("/single/post", {
                 templateUrl: "app/articles/single-post.html",
-                controller: "servicesController"
+                controller: "postsController"
             })
             .otherwise({
                 redirectTo: "/"
