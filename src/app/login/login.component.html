@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-6 p-4">
+            <img src="../../assets/guru.jpg" class="w-100 shadow-sm" />
+        </div>
+        <div class="col-md-6">
+        <form (submit)="loginForm()" novalidate>
+            <div class="card my-4 shadow-sm">
+                <div class="card-header bg-dark text-warning" >
+                    <img src="../../assets/logo1.png" class="float-right" width="64"/>Administrator Login
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        Login Email<br>
+                        <input type="email" name="first" [(ngModel)]='email' class="form-control" required/>
+                    </p>
+                    <p class="card-text">
+                        Password<br>
+                        <input type="password" name="pass" [(ngModel)]='password' class="form-control" required/>
+                    </p>
+                    <p class="card-text">
+                        <span *ngIf="isLogginAttempt" class="alert alert-warning  font-weight-bold alert-sm my-4">{{userLoginState}}</span>
+                        <br>
+                        <button class="btn btn-secondary my-4" >Login</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

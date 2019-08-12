@@ -1,0 +1,15 @@
+.thumb:hover{
+    border-style: solid;
+    border-color: 2px;
+    border-width: 10px;
+    
+}
+.thumb{
+    border: none;
+    transition: 0ms 2500ms all ease-in-out;
+    -o-transition: 0ms 2500ms all ease-in-out;
+    -webkit-transition:  0ms 2500ms all ease-in-out;
+    -moz-transition:  0ms 2500ms all ease-in-out;
+    border-color: white;
+    border-width: 2px;
+}

@@ -1,0 +1,21 @@
+<div class="container-fluid w-100 my-4" ng-controller="welcomeController as Welcome">
+    <div class="row">
+     
+        <div class="col-md-8">
+              
+                <div class="card-header bg-dark shadow-sm text-warning">
+                       
+                </div>
+                <img ng-src="{{Welcome.currentImage}}" class="w-100 shadow-sm mainPhoto"/>
+        </div>
+        <div class="col-md-4 m-auto text-center">
+                <img src="../../assets/landing.jpg" class="w-100 shadow-sm mainPhoto"/>
+                <div class="row">
+                        <div class="col-xs-3" ng-repeat="image in Welcome.thumbs">
+                                <img ng-src="{{image}}" ng-click="Welcome.showImage($index)" width="150" class="m-2 shadow-sm border rounded thumb" (click)="showLarge(i)"/>
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container p-4 my-4" ng-controller="servicesController as articles">
+    <div class="row">
+        <div class="col-md-12">
+                <h4 class="text-muted  border-bottom mb-2">
+                        Published Articles  <BR/>
+                     
+                    </h4>
+                    search <input type="" class="k-textbox" ng-model="articles.read"/>
+                        
+            <div class="media my-2" ng-repeat="blog in articles.getCompanyArticles | filter: articles.read">
+                <div class="media-left mx-2">
+                    <img src="{{blog.image}}" width="32" /> 
+                </div>
+                <div class="media-body text-muted">
+                    <div class="media-title">{{blog.title}}</div>
+                    <a href="{{blog.link}}">{{blog.link}}</a>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+</div>
+
+<div class="container">
+
+</div>
