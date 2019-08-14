@@ -1,29 +1,28 @@
 
 
-<div class="container">
+<div class="container"ng-controller="Admin as section">
     <div class="row my-4">
-        <div class="col-md-6 p-4">
-            <img src="../../assets/guru.jpg" class="w-100 shadow-sm" />
+        <div class="col-md-6 p-4"> 
         </div>
         <div class="col-md-6">
-        <form (submit)="loginForm()" novalidate>
+        <form ng-submit="section.credentials.signIn()" novalidate>
             <div class="card my-4 shadow-sm">
                 <div class="card-header bg-dark text-warning" >
-                    <img src="../../assets/logo1.png" class="float-right" width="64"/>Administrator Login
+                    <img src="../../assets/login.png" class="float-right font-weight-bold" width="64"/>Login
                 </div>
                 <div class="card-body">
                     <p class="card-text">
                         Login Email<br>
-                        <input type="email" name="first" [(ngModel)]='email' class="form-control" required/>
+                        <input type="email" name="first" ng-model='section.credentials.user.email' class="k-textbox form-control" required/>
                     </p>
                     <p class="card-text">
                         Password<br>
-                        <input type="password" name="pass" [(ngModel)]='password' class="form-control" required/>
+                        <input type="password" name="pass" ng-model='section.credentials.user.password' class="k-textbox form-control" required/>
                     </p>
+                    
                     <p class="card-text">
-                        <span *ngIf="isLogginAttempt" class="alert alert-warning  font-weight-bold alert-sm my-4">{{userLoginState}}</span>
-                        <br>
-                        <button class="btn btn-secondary my-4" >Login</button>
+                         <br>
+                        <button kendo-button>Login</button>
                     </p>
                 </div>
             </div>

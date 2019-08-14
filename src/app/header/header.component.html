@@ -1,18 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" ng-controller="Admin as section">
         <a class="navbar-brand" href="/"><img src="../../assets/logo1.png" width="120" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse mr-auto" id="navbarNavAltMarkup">
-          <div class="navbar-nav p-2 ">
-           <a class="nav-item nav-link" href="#/services">Services</a>
+          <div class="navbar-nav p-3 ">
+              <a class="nav-item nav-link" href="/">Home</a>
+              <a class="nav-item nav-link" href="#/collaborate/team">About Us</a>
+           <a class="nav-item nav-link" href="#/services">Our Services</a>
             <a class="nav-item nav-link"  href="#/articles">Article Publications</a>
-           
+            <a class="nav-item nav-link"  href="#/announcements">Announcements</a>
             <a href="#/contact" class="nav-link nav-item">Get In Touch</a>
-            <a class="nav-item nav-link" href="#/collaborate/team">Who We Are</a>
-            <a href="#/dashboard" ng-if="userIsLogged" class="nav-link nav-item">Dashboard</a>
-  
-            <a href="#/logout" ng-if="userIsLogged" class="nav-link nav-item btn btn-danger">Logout</a>
+            <a href="#/account/dashboard" ng-if="section.isUser"  class="nav-link nav-item">Dashboard</a>
+            <a href="#/account/login" ng-if="!section.isUser"  class="nav-link nav-item btn btn bg-light float-right mr-auto"><img src="../../assets/loginicon.png" width="32">Login</a>
+            <a href="#/account/logout" ng-if="section.isUser" ng-click="section.signOut()"  class="nav-link nav-item btn btn-danger">Logout</a>
+            <a href='http://www.uptasker.co.za/b/angulardevelopers' class="nav-item nav-link btn bg-light"><img src="../../assets/uptasker.png" width="120"/></a>
+               
           </div>
         </div>
       </nav>

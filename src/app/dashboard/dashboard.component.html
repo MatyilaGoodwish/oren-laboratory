@@ -1,1 +1,8 @@
-<p>dashboard works!</p>
+<div class="container m-4" ng-controller="Admin as section" >
+    <div ng-if="!section.isUser">
+        <div class="alert alert-danger">No user currently logged in...</div>
+    </div>
+   <div class="container " ng-if="section.isUser"> 
+        <div class="alert alert-success">We currently upgrading our platform</div>
+   </div>
+</div>

@@ -1,9 +1,9 @@
 <div ng-controller="postsController as post" class="container my-4">
-    <form>
-        <p> Post title<br>
-            <input type="text" ng-model="post.title" class="k-textbox w-100"/>
+    <form ng-submit="post.publish()">
+        <p class="text-muted"> Post title<br>
+            <input type="text" ng-model="post.blogPost.title" class="k-textbox w-100"/>
         </p>
-        <textarea kendo-editor></textarea>
+        <textarea kendo-editor ng-model="post.blogPost.message"></textarea>
 
         <p class="my-4">
             <button kendo-button>Publish</button>

@@ -1,41 +1,16 @@
-  <div class="container p-4 my-4">
+<div class="container p-4 my-4" ng-controller="Admin as section">
         <div class="row">
-            <div class="col-md-6">
-                    <h4 class="text-muted border-bottom mb-2">
-                            Contact Information
-                        </h4>
-                <p class="text-muted">
-                       
-                    "OREN LABORATORIES" is situated in South Africa in the Gauteng province at the Johannesburg CBD; For information regarding business application development the following phone number can be used +27(084) 790-8653.
-                    
-                </p>
-                <p class="text-muted">
-                    Any other business related questions can also be asked there anything general. "OREN LABORATORIES" also known as "ANGULAR DEVELOPERS" operates as a division of "BD GROUP" which provides all the necessary required 
-                    support for your business and application development needs.
-                </p>
-                <h4 class="text-muted  border-bottom mb-2">
-                    Guidelines
-                </h4>
-                <p class="text-muted">
-                    In order to fully get the support and assistance you require here are the steps needed to attain just that we are looking forward in working with you in the near future:
-                </p>
-                 
-                    <ul class="text-muted">
-                        <li>Must have legal purpose or usage of the application without violating any copyrighted or trademarks.</li>
-                        <li>Schedule a telephone or in-person meeting with a development consultant</li>
-                        <li>Must have a clear written down list of challenges, so we could identify pain points with your business</li>
-                        <li>Must assign someone to the project to keep regular communication throughout the phases of the application development</li>
-                        <li>Ethical business conduct, trust and goodd workmanship is a requirement </li>
-                    </ul>
-               
+            <div class="col-md-6 text-left align-left" ng-repeat="item in section.contact | date: 'asc' ">
+                <img ng-src="{{item.icon}}" class="w-100" />
+                <h3 class="font-weight-bold my-4 border-bottom">
+                    {{item.title}}
+                </h3>
+                <div class="text-muted">
+                    {{item.content}}
+                </div>
+                <div class="text-muted border-top my-4">
+                    {{item.extras }}
+                </div>
             </div>
-            <div class="col-md-6 text-center text-muted">
-                  <img src="../../assets/logo1.png" width="124" />
-                  <div class="display-4">{{title}}</div>
-                  <p class="lead text-muted">
-                        {{subtitle}}
-                  </p>
-            </div>
-            
         </div>
     </div>

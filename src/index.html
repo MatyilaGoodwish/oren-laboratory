@@ -1,39 +1,53 @@
 <!doctype html>
-<html lang="en" ng-app="orenlabs">
-
+<html lang="en" ng-app="orenlabs" ng-controller="Admin as section">
 <head>
   <meta charset="utf-8">
-  <title>Custom website development in South Africa</title>
-  <meta name="keywords" content="angular, development,business" />
+  <title ng-bind="section.page.title"></title>
+  <meta name="keywords" content="website,css,mobile,html,angular,development,business" />
   <meta name="description"
     content="We develop AngularJS applications we value legacy technology as its well researched and studied as opposed to new and latest beta version, if you are willing to invest in an AngularJS web or mobile application you have come to the right place." />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="assets/logo1.png">
-  <link rel="stylesheet" href="styles/kendo.common.min.css"/>
-  <link rel="stylesheet" href="styles/kendo.uniform.min.css"/>
-  <link rel="stylesheet" href="css/bootstrap.css"/> 
-<script src="lib/firebase-app.js"></script>
-<script src="lib/firebase-firestore.js"></script>
-<script src="lib/firebase-auth.js"></script>
+  <link rel="icon" type="image/x-icon" ng-href="{{section.page.icon}}">
+  <link rel="stylesheet" ng-href="{{section.page.common}}" />
+  <link rel="stylesheet" ng-href="{{section.page.uinterface}}" />
+  <link rel="stylesheet" ng-href="{{section.page.bootstrap}}" />
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
 
-<script src="auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
  
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAM9TVPF0ET2LIERTy09ylf5QdoO_owExo",
+    authDomain: "bitnami-m8abm8-ljw.firebaseapp.com",
+    databaseURL: "https://bitnami-m8abm8-ljw.firebaseio.com",
+    projectId: "bitnami-m8abm8-ljw",
+    storageBucket: "bitnami-m8abm8-ljw.appspot.com",
+    messagingSenderId: "187304598083",
+    appId: "1:187304598083:web:11423d8bff817312"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </head>
-
 <body>
   <app-root></app-root>
 
   <script src="js/jquery.js"></script>
   <script src="lib/angular.js"></script>
+  <script src="lib/angular-sanitize.js"></script>
   <script src="lib/angular-route.js"></script>
   <script src="lib/angular-cookies.js"></script>
-  <script src="lib/swal.js"></script>
+  
+  <script ng-src="{{section.page.ui.notifications}}"></script>
   <script src="config.js"></script>
   <script src="routes/app.routing.js"></script>
-  <script src="directives/app.bootstrap.js"></script>
-  <script src="app/welcome/welcome.controller.js"></script>
-  <script src="app/common/services.common.js"></script>
-  <script src="app/common/services.controller.js"></script>
+  <script src="directives/app.bootstrap.js"></script>   
+  <script src="app/articles/posts.controller.js"></script>
+  <script src="admin/admin.controller.js"></script>
   <script src="js/kendo.all.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap.bundle.js"></script>

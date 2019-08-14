@@ -1,46 +1,16 @@
-<div class="container p-4 my-4" ng-controller="servicesController as company">
+<div class="container p-4 my-4" ng-controller="Admin as section">
         <div class="row">
-            <div class="col-md-6">
-                    <h4 class="text-muted  border-bottom mb-2">
-                            Development Services
-                        </h4>
-                Total Services offered: <span class="badge badge-warning">{{company.getServices.length}}</span>
-                <div class="card my-2 shadow-sm" ng-repeat="service in company.getServices | filter: company.service.query">
-                    <p class="card-header bg-dark text-warning font-weight-bold">{{service.title}}
-                        <a href="#/quotation/request" kendo-button class="float-right"><img src="../../assets/uptasker.png" width="90"/> Get Quote</a>
-                    </p>
-                    <div class="card-body text-muted">
-                            <p class="card-text">
-                                    {{service.description}}
-                                </p>
-                            
-                    </div>
-                    <div class="card-footer">
-                        <p class="card-text text-muted">
-                            {{service.slug}}
-                        </p>
-                    </div>
+            <div class="col-md-6 bg-white text-left align-left" ng-repeat="item in section.services">
+                <img ng-src="{{item.graphic}}" width="100%"/>
+                <h3 class="font-weight-bold my-4">
+                    {{item.title}}
+                </h3>
+                <div class="text-muted">
+                    {{item.content}}
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-            <div class="col-md-6 text-center text-muted">
-                  <img src="../../assets/logo1.png" width="124" />
-                  <div class="display-4">{{title}}</div>
-                  <p class="text-muted">
-                      Search<br>
-                        <input type="text" ng-model="company.service.query" class="k-textbox" />
-                      </p>
-                     
+                <div class="text-muted border-top my-4 p-3">
+                    <a href='http://www.uptasker.co.za/b/angulardevelopers' class="btn btn-lg bg-light"><img ng-src="{{item.image}}" width="120"/></a>
+                </div>
             </div>
             
         </div>
