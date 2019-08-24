@@ -12,6 +12,15 @@
                 templateUrl: "app/services/services.component.html",
                 controller: "Admin"
             })
+            .when("/portfolio", {
+                templateUrl: "pages/portfolio.html"
+            })
+            .when("/portfolio/shopright", {
+                templateUrl: "shopright/main.html"
+            })
+            .when("/portfolio/shopright/query", {
+                templateUrl: "shopright/main.html"
+            })
             .when("/articles", {
                 templateUrl: "app/articles/articles.component.html",
                 controller: "Admin"

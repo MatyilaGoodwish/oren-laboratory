@@ -1,6 +1,6 @@
 (function () {
-    const app = angular.module("orenlabs", ["ngRoute", "ngCookies", "ngSanitize", "kendo.directives"]);
+    const app = angular.module("orenlabs", ["ngRoute", "ngCookies", "ngSanitize"]);
      app.run(function ($cookies, $http) {
-        //$cookies.remove("user-active");
+        
     })
 }())

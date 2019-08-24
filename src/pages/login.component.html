@@ -1,0 +1,30 @@
+
+
+<div class="container"ng-controller="Admin as section">
+    <div class="row my-4">
+        <div class="col-md-6 p-4"> 
+        </div>
+        <div class="col-md-6">
+        <form ng-submit="section.credentials.signIn()" novalidate>
+            <div class="card my-4 shadow-sm">
+             
+                <div class="card-body">
+                    <p class="card-text text-white">
+                        Login Email<br>
+                        <input type="email" autocomplete="email" name="first" ng-model='section.credentials.user.email' class="k-textbox form-control" required/>
+                    </p>
+                    <p class="card-text  text-white">
+                        Password<br>
+                        <input type="password" autocomplete="password" name="pass" ng-model='section.credentials.user.password' class="k-textbox form-control" required/>
+                    </p>
+                    
+                    <p class="card-text">
+                         <br>
+                        <button kendo-button class="btn bg-light btn-lg">Login</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>

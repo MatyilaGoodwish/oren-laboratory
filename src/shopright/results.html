@@ -1,0 +1,48 @@
+<div class="container p-4 my-4 shadow-sm rounded" style="background-color: red" ng-controller="Admin as waybill">
+        <img src="../assets/shoprite_logo.png" width="" />
+        <div class="row my-4">
+    
+            <!-- loader-->
+            <div class="col-md-12 my-4 text-center float-center p-4" ng-if="waybill.shopright.isLoading">
+              <img src="../assets/loader.gif" width="128"/>
+              <p class="text-white text-center font-weight-bold my-4 ">
+                  Processing counter slip S{{waybill.shopright.waybill}}
+              </p>
+            </div>
+            <!-- loader-->
+    
+    
+            <!-- initial ui -->
+            <div class="col-md-8 my-4" ng-if="waybill.shopright.isTracking">
+                <form ng-submit="waybill.shopright.captureWaybill(waybill.shopright.waybill)">
+                    <p class="text-white font-weight-bold">
+                        Till/Slip Number <br>
+                    </p>
+                    <p>
+                        <input type="number" ng-model="waybill.shopright.waybill" placeholder="S047541"  class="form-control" required>
+                    </p>
+                    <br>
+                    <input type="submit"  value="Track Parcel" 
+                        class="btn btn-lg shadow-sm text-white">
+                </form>
+            </div>
+    
+            <!-- initial ui-->
+             <!-- initial ui -->
+             <div class="col-md-8 my-4" ng-if="waybill.shopright.isDelivery">
+                    <form ng-submit="waybill.shopright.captureWaybill(waybill.shopright.waybill)">
+                        <p class="text-white font-weight-bold">
+                            Till/Slip Number <br>
+                        </p>
+                        <p>
+                            <input type="number" ng-model="waybill.shopright.waybill" placeholder="S047541"  class="form-control" required>
+                        </p>
+                        <br>
+                        <input type="submit"  value="Track Parcel" 
+                            class="btn btn-lg shadow-sm text-white">
+                    </form>
+                </div>
+        
+                <!-- initial ui-->
+        </div>
+    </div>

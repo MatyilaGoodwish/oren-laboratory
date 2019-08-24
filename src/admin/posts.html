@@ -1,16 +1,14 @@
 <div class="container p-4 my-4" ng-controller="Admin as section">
     <div class="row">
-        <div class="col-md-6 text-left align-left" ng-repeat="item in section.notifications | date: 'asc' ">
+        <div class="col-md-6 text-left align-left" ng-repeat="item in section.notifications">
             <img ng-src="{{item.icon}}" class="w-100"/>
             <h3 class="font-weight-bold my-4">
                 {{item.title}}
             </h3>
             <div class="text-muted">
-                {{item.content}}
+                {{item.message}}
             </div>
-            <div class="text-muted border-top my-4">
-                {{item.date | date }}
-            </div>
+             
         </div>
     </div>
 </div>

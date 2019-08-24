@@ -5,12 +5,12 @@
             
             this.articles = [];
             this.blogPost = {
-                title: "",
-                message: "",
-                timestamp: new Date(),
-                postId: btoa(this.title) + btoa(this.message) + btoa(this.timestamp)
+                "title": "",
+                "message": "",
+                "postId": btoa(this.title) + btoa(this.message) + btoa(this.timestamp)
             }
             this.publish = function () {
+
                 //use firebase to add notification
                 let blogRef = firebase.firestore().collection("app-notifications"); 
                 try{
@@ -18,8 +18,7 @@
                 }catch(error){
                     console.log(error);
                 }
-               
-
+            
             }
         }])
 }())
